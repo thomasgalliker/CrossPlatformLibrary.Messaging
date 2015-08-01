@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CrossPlatformLibrary.Settings.iOSUnified")]
+[assembly: AssemblyTitle("CrossPlatformLibrary.Messaging.iOSUnified")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Thomas Galliker")]
-[assembly: AssemblyProduct("CrossPlatformLibrary.Settings.iOSUnified")]
+[assembly: AssemblyProduct("CrossPlatformLibrary.Messaging.iOSUnified")]
 [assembly: AssemblyCopyright("Copyright © 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
