@@ -1,6 +1,6 @@
 using Microsoft.Phone.Tasks;
 
-using Xamarin.Utils;
+using CrossPlatformLibrary.Utils;
 
 namespace CrossPlatformLibrary.Messaging
 {

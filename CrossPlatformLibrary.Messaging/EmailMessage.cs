@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-using Xamarin.Utils;
+using CrossPlatformLibrary.Utils;
 
 namespace CrossPlatformLibrary.Messaging
 {

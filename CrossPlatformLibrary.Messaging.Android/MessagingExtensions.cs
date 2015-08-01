@@ -1,7 +1,7 @@
 using Android.App;
 using Android.Content;
 
-using Xamarin.Utils;
+using CrossPlatformLibrary.Utils;
 
 namespace CrossPlatformLibrary.Messaging
 {
