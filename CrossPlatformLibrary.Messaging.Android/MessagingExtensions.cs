@@ -1,7 +1,7 @@
 using Android.App;
 using Android.Content;
 
-using CrossPlatformLibrary.Utils;
+using Guards;
 
 namespace CrossPlatformLibrary.Messaging
 {

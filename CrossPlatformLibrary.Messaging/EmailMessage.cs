@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-using CrossPlatformLibrary.Utils;
+using Guards;
 
 namespace CrossPlatformLibrary.Messaging
 {

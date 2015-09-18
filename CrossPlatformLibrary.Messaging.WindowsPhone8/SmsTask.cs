@@ -1,6 +1,5 @@
+using Guards;
 using Microsoft.Phone.Tasks;
-
-using CrossPlatformLibrary.Utils;
 
 namespace CrossPlatformLibrary.Messaging
 {
