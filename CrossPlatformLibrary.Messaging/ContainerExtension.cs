@@ -6,9 +6,9 @@ namespace CrossPlatformLibrary.Messaging
     {
         public void Initialize(ISimpleIoc container)
         {
-            container.RegisterWithConvention<IEmailTask>();
-            container.RegisterWithConvention<IPhoneCallTask>();
-            container.RegisterWithConvention<ISmsTask>();
+            container.Register<IEmailTask, EmailTask>();
+            container.Register<IPhoneCallTask, PhoneCallTask>();
+            container.Register<ISmsTask, SmsTask>();
         }
     }
 }

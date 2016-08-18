@@ -1,6 +1,5 @@
 
-using System;
-
+using Guards;
 #if __UNIFIED__
 using Foundation;
 using UIKit;
@@ -14,12 +13,6 @@ namespace CrossPlatformLibrary.Messaging
 {
     public class PhoneCallTask : IPhoneCallTask
     {
-        public PhoneCallTask()
-        {
-        }
-
-        #region IPhoneCallTask Members
-
         public bool CanMakePhoneCall
         {
             get
@@ -30,10 +23,7 @@ namespace CrossPlatformLibrary.Messaging
 
         public void MakePhoneCall(string number, string name = null)
         {
-            if (string.IsNullOrWhiteSpace(number))
-            {
-                throw new ArgumentNullException("number");
-            }
+            Guard.ArgumentNotNullOrEmpty(number, nameof(number));
 
             if (this.CanMakePhoneCall)
             {
@@ -41,7 +31,5 @@ namespace CrossPlatformLibrary.Messaging
                 UIApplication.SharedApplication.OpenUrl(nsurl);
             }
         }
-
-        #endregion
     }
 }

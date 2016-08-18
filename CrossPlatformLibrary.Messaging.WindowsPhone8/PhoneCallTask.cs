@@ -1,5 +1,6 @@
-using CrossPlatformLibrary.Tracing;
 using Guards;
+
+using Tracing;
 
 namespace CrossPlatformLibrary.Messaging
 {
@@ -9,7 +10,7 @@ namespace CrossPlatformLibrary.Messaging
 
         public PhoneCallTask(ITracer tracer)
         {
-            Guard.ArgumentNotNull(() => tracer);
+            Guard.ArgumentNotNull(tracer, nameof(tracer));
 
             this.tracer = tracer;
         }

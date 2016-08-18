@@ -1,6 +1,7 @@
-using System;
 
 using Android.Content;
+
+using Guards;
 
 using Uri = Android.Net.Uri;
 
@@ -20,15 +21,8 @@ namespace CrossPlatformLibrary.Messaging
 
         public void SendSms(string recipient, string message)
         {
-            if (string.IsNullOrWhiteSpace(recipient))
-            {
-                throw new ArgumentNullException("recipient");
-            }
-
-            if (string.IsNullOrWhiteSpace(message))
-            {
-                throw new ArgumentNullException("message");
-            }
+            Guard.ArgumentNotNull(recipient, nameof(recipient));
+            Guard.ArgumentNotNull(message, nameof(message));
 
             if (this.CanSendSms)
             {

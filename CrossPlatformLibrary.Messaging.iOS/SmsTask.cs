@@ -1,5 +1,6 @@
 using System;
 
+using Guards;
 #if __UNIFIED__
 using MessageUI;
 using UIKit;
@@ -15,12 +16,6 @@ namespace CrossPlatformLibrary.Messaging
     {
         private MFMessageComposeViewController smsController;
 
-        public SmsTask()
-        {
-        }
-
-        #region ISmsTask Members
-
         public bool CanSendSms
         {
             get
@@ -31,20 +26,12 @@ namespace CrossPlatformLibrary.Messaging
 
         public void SendSms(string recipient, string message)
         {
-            if (string.IsNullOrWhiteSpace(recipient))
-            {
-                throw new ArgumentNullException("recipient");
-            }
-
-            if (string.IsNullOrWhiteSpace(message))
-            {
-                throw new ArgumentNullException("message");
-            }
-
+            Guard.ArgumentNotNullOrEmpty(recipient, nameof(recipient));
+            Guard.ArgumentNotNullOrEmpty(message, nameof(message));
+          
             if (this.CanSendSms)
             {
                 this.smsController = new MFMessageComposeViewController();
-
                 this.smsController.Recipients = new[] { recipient };
                 this.smsController.Body = message;
 
@@ -56,7 +43,7 @@ namespace CrossPlatformLibrary.Messaging
                         var uiViewController = sender as UIViewController;
                         if (uiViewController == null)
                         {
-                            throw new ArgumentException("sender");
+                            throw new ArgumentException(nameof(sender));
                         }
 
                         uiViewController.DismissViewController(true, () => { });
@@ -67,7 +54,5 @@ namespace CrossPlatformLibrary.Messaging
                 this.smsController.PresentUsingRootViewController();
             }
         }
-
-        #endregion
     }
 }

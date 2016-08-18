@@ -3,6 +3,8 @@ using System;
 using Android.Content;
 using Android.Text;
 
+using Guards;
+
 using Uri = Android.Net.Uri;
 
 namespace CrossPlatformLibrary.Messaging
@@ -21,10 +23,7 @@ namespace CrossPlatformLibrary.Messaging
         {
             // NOTE: http://developer.xamarin.com/recipes/android/networking/email/send_an_email/
 
-            if (email == null)
-            {
-                throw new ArgumentNullException("email");
-            }
+            Guard.ArgumentNotNull(email, nameof(email));
 
             if (email.Attachments.Count > 1)
             {

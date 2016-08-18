@@ -1,5 +1,6 @@
 using System;
 
+using Guards;
 #if __UNIFIED__
 using Foundation;
 using MessageUI;
@@ -27,10 +28,7 @@ namespace CrossPlatformLibrary.Messaging
 
         public void SendEmail(EmailMessage email)
         {
-            if (email == null)
-            {
-                throw new ArgumentNullException("email");
-            }
+            Guard.ArgumentNotNull(email, nameof(email));
 
             if (this.CanSendEmail)
             {

@@ -1,5 +1,6 @@
-using System;
 using System.Collections.Generic;
+
+using Guards;
 
 using Microsoft.Phone.Tasks;
 
@@ -17,21 +18,18 @@ namespace CrossPlatformLibrary.Messaging
 
         public void SendEmail(EmailMessage email)
         {
-            if (email == null)
-            {
-                throw new ArgumentNullException("email");
-            }
+            Guard.ArgumentNotNull(email, nameof(email));
 
             if (this.CanSendEmail)
             {
-                EmailComposeTask emailComposeTask = new EmailComposeTask
-                                                        {
-                                                            Subject = email.Subject,
-                                                            Body = email.Message,
-                                                            To = ToDelimitedAddress(email.Recipients),
-                                                            Cc = ToDelimitedAddress(email.RecipientsCc),
-                                                            Bcc = ToDelimitedAddress(email.RecipientsBcc)
-                                                        };
+                var emailComposeTask = new EmailComposeTask
+                {
+                    Subject = email.Subject,
+                    Body = email.Message,
+                    To = ToDelimitedAddress(email.Recipients),
+                    Cc = ToDelimitedAddress(email.RecipientsCc),
+                    Bcc = ToDelimitedAddress(email.RecipientsBcc)
+                };
                 emailComposeTask.Show();
             }
         }

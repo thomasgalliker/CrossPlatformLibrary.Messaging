@@ -1,4 +1,3 @@
-using Guards;
 #if __UNIFIED__
 using UIKit;
 #else
@@ -9,10 +8,8 @@ namespace CrossPlatformLibrary.Messaging
 {
     internal static class MessagingExtensions
     {
-        public static void PresentUsingRootViewController(this UIViewController controller)
+        internal static void PresentUsingRootViewController(this UIViewController controller)
         {
-            Guard.ArgumentNotNull(() => controller);
-
             UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(controller, true, () => { });
         }
     }
