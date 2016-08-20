@@ -35,7 +35,6 @@
     <DocumentationFile>bin\Release\CrossPlatformLibrary.Messaging.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ContainerExtension.cs" />
     <Compile Include="EmailTask.cs" />
     <Compile Include="PhoneCallTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

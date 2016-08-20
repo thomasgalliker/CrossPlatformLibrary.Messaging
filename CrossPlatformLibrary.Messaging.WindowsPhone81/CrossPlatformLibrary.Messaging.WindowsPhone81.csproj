@@ -104,6 +104,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="..\CrossPlatformLibrary.Messaging.Shared\CrossPlatformLibrary.Messaging.Shared.projitems" Label="Shared" />
+  <Import Project="..\CrossPlatformLibrary.Messaging.Shared.WinRT\CrossPlatformLibrary.Messaging.Shared.WinRT.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>

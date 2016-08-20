@@ -8,21 +8,19 @@ namespace CrossPlatformLibrary.Messaging
 {
     internal class EmailTask : IEmailTask
     {
-        public bool CanSendEmail
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public bool CanSendEmail { get { return true; } }
 
-        public void SendEmail(EmailMessage email)
+        public bool CanSendEmailAttachments { get { return false; } }
+
+        public bool CanSendEmailBodyAsHtml { get { return false; } }
+
+        public void SendEmail(IEmailMessage email)
         {
             Guard.ArgumentNotNull(email, nameof(email));
 
             if (this.CanSendEmail)
             {
-                var emailComposeTask = new EmailComposeTask
+                EmailComposeTask emailComposeTask = new EmailComposeTask
                 {
                     Subject = email.Subject,
                     Body = email.Message,

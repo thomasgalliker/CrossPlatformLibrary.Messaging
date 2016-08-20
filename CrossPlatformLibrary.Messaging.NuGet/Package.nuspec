@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>CrossPlatformLibrary.Messaging</id>
-    <version>2.0.0-pre</version>
+    <version>2.0.0-pre4</version>
     <title>CrossPlatformLibrary.Messaging</title>
     <authors>Thomas Galliker</authors>
     <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
@@ -67,6 +67,11 @@
     <file src="..\CrossPlatformLibrary.Messaging.WindowsStore\Bin\Release\CrossPlatformLibrary.Messaging.pdb" target="lib\win81\CrossPlatformLibrary.Messaging.pdb" />
     <file src="..\CrossPlatformLibrary.Messaging.WindowsStore\Bin\Release\CrossPlatformLibrary.Messaging.xml" target="lib\win81\CrossPlatformLibrary.Messaging.xml" />
 
+    <!--Universal Windows Platform-->
+    <file src="..\CrossPlatformLibrary.Messaging.UWP\bin\Release\CrossPlatformLibrary.Messaging.dll" target="lib\uwp10.0\CrossPlatformLibrary.Messaging.dll" />
+    <file src="..\CrossPlatformLibrary.Messaging.UWP\bin\Release\CrossPlatformLibrary.Messaging.pdb" target="lib\uwp10.0\CrossPlatformLibrary.Messaging.pdb" />
+    <file src="..\CrossPlatformLibrary.Messaging.UWP\bin\Release\CrossPlatformLibrary.Messaging.xml" target="lib\uwp10.0\CrossPlatformLibrary.Messaging.xml" />
+    
     <file src="tools\init.ps1" target="tools\init.ps1" />
     <file src="tools\install.ps1" target="tools\install.ps1" />
     <file src="tools\uninstall.ps1" target="tools\uninstall.ps1" />

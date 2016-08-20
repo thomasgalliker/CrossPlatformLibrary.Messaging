@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>3f7199f3-58f9-46c5-bd40-f4cd1399c0c3</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CrossPlatformLibrary.Messaging</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)SmsTask.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EmailTask.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhoneCallTask.cs" />
+  </ItemGroup>
+</Project>

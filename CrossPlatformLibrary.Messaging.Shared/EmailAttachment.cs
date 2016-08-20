@@ -1,53 +1,83 @@
-﻿using System.IO;
-
-using Guards;
+﻿using System;
+using System.IO;
 
 namespace CrossPlatformLibrary.Messaging
 {
-    public class EmailAttachment
+    public class EmailAttachment : IEmailAttachment
     {
-        /// <summary>
-        ///     Create a new attachment. Use on Android platform or WinPhoneRT as we
-        ///     only require the file.
-        /// </summary>
-        /// <param name="fileName">File location</param>
-        public EmailAttachment(string fileName)
-        {
-            Guard.ArgumentNotNullOrEmpty(() => fileName);
 
-            this.FileName = fileName;
+#if WINDOWS_PHONE_APP || WINDOWS_UWP
+
+        public EmailAttachment(Windows.Storage.IStorageFile file)
+        {
+            if (file == null)
+                throw new ArgumentNullException(nameof(file));
+
+            File = file;
+            FilePath = file.Path;
+            FileName = file.Name;
+            ContentType = file.ContentType;
         }
 
-        /// <summary>
-        ///     Create a new attachment.  Use on iOS platform as we require all
-        ///     parameter info
-        /// </summary>
-        /// <param name="fileName">File location</param>
-        /// <param name="content">File contents</param>
-        /// <param name="contentType">File content type</param>
-        public EmailAttachment(string fileName, Stream content, string contentType)
-            : this(fileName)
-        {
-            Guard.ArgumentNotNull(() => content);
-            Guard.ArgumentNotNullOrEmpty(() => contentType);
+        public Windows.Storage.IStorageFile File { get; }
 
-            this.Content = content;
+#elif __ANDROID__
+
+        public EmailAttachment(string filePath)
+        {
+            if (string.IsNullOrWhiteSpace(filePath))
+                throw new ArgumentNullException(nameof(filePath));
+
+            string extension = Android.Webkit.MimeTypeMap.GetFileExtensionFromUrl(filePath);
+            string contentType = Android.Webkit.MimeTypeMap.Singleton.GetMimeTypeFromExtension(extension);
+
+            FilePath = filePath;
+            FileName = Path.GetFileName(filePath);
+            ContentType = contentType;
+        }
+
+#elif __IOS__
+
+        public EmailAttachment(string fileName, Stream content, string contentType)
+        {
+            if (string.IsNullOrWhiteSpace(fileName))
+                throw new ArgumentNullException(nameof(fileName));
+
+            if (content == null)
+                throw new ArgumentNullException(nameof(content));
+
+            if (string.IsNullOrWhiteSpace(contentType))
+                throw new ArgumentNullException(nameof(contentType));
+
+            FileName = fileName;
+            Content = content;
+            ContentType = contentType;
+        }
+
+        public Stream Content { get; }
+#endif
+
+#if !WINDOWS_PHONE_APP || !WINDOWS_UWP
+
+        public EmailAttachment(string filePath, string contentType)
+        {
+            if (string.IsNullOrWhiteSpace(filePath))
+                throw new ArgumentNullException(nameof(filePath));
+
+            if (string.IsNullOrWhiteSpace(contentType))
+                throw new ArgumentNullException(nameof(contentType));
+
+            this.FilePath = filePath;
+            this.FileName = Path.GetFileName(filePath);
             this.ContentType = contentType;
         }
 
-        /// <summary>
-        ///     Gets or sets the file content. Required on iOS.
-        /// </summary>
-        public Stream Content { get; private set; }
+#endif
 
-        /// <summary>
-        ///     Gets the file content type. Required on iOS.
-        /// </summary>
-        public string ContentType { get; private set; }
+        public string ContentType { get; }
 
-        /// <summary>
-        ///     Gets the file location.
-        /// </summary>
-        public string FileName { get; private set; }
+        public string FileName { get; }
+
+        public string FilePath { get; }
     }
 }

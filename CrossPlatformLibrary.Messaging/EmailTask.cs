@@ -10,7 +10,23 @@ namespace CrossPlatformLibrary.Messaging
             }
         }
 
-        public void SendEmail(EmailMessage email)
+        public bool CanSendEmailAttachments
+        {
+            get
+            {
+                throw new NotImplementedInReferenceAssemblyException();
+            }
+        }
+
+        public bool CanSendEmailBodyAsHtml
+        {
+            get
+            {
+                throw new NotImplementedInReferenceAssemblyException();
+            }
+        }
+
+        public void SendEmail(IEmailMessage email)
         {
             throw new NotImplementedInReferenceAssemblyException();
         }

@@ -9,9 +9,12 @@
     <Import_RootNamespace>CrossPlatformLibrary.Messaging</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ContainerExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EmailAttachment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EmailMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EmailMessageBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEmailAttachment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEmailMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEmailTask.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IPhoneCallTask.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ISmsTask.cs" />

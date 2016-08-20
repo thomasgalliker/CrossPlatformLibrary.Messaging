@@ -1,0 +1,745 @@
+{
+  "locked": false,
+  "version": 2,
+  "targets": {
+    "UAP,Version=v10.0": {
+      "CommonServiceLocator/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "CrossPlatformLibrary/2.0.0-pre6": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator": "1.3.0",
+          "Guards": "1.0.11",
+          "Tracing": "1.0.2"
+        },
+        "compile": {
+          "lib/uap10.0/CrossPlatformLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/CrossPlatformLibrary.dll": {}
+        }
+      },
+      "Guards/1.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/win81/Guards.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Guards.dll": {}
+        }
+      },
+      "Tracing/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Tracing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Tracing.dll": {}
+        }
+      },
+      "Xamarin.Forms/2.3.1.114": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Core.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Xaml.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Core.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Xaml.dll": {}
+        }
+      }
+    },
+    "UAP,Version=v10.0/win10-arm": {
+      "CommonServiceLocator/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "CrossPlatformLibrary/2.0.0-pre6": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator": "1.3.0",
+          "Guards": "1.0.11",
+          "Tracing": "1.0.2"
+        },
+        "compile": {
+          "lib/uap10.0/CrossPlatformLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/CrossPlatformLibrary.dll": {}
+        }
+      },
+      "Guards/1.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/win81/Guards.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Guards.dll": {}
+        }
+      },
+      "Tracing/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Tracing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Tracing.dll": {}
+        }
+      },
+      "Xamarin.Forms/2.3.1.114": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Core.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Xaml.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Core.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Xaml.dll": {}
+        }
+      }
+    },
+    "UAP,Version=v10.0/win10-arm-aot": {
+      "CommonServiceLocator/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "CrossPlatformLibrary/2.0.0-pre6": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator": "1.3.0",
+          "Guards": "1.0.11",
+          "Tracing": "1.0.2"
+        },
+        "compile": {
+          "lib/uap10.0/CrossPlatformLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/CrossPlatformLibrary.dll": {}
+        }
+      },
+      "Guards/1.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/win81/Guards.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Guards.dll": {}
+        }
+      },
+      "Tracing/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Tracing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Tracing.dll": {}
+        }
+      },
+      "Xamarin.Forms/2.3.1.114": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Core.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Xaml.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Core.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Xaml.dll": {}
+        }
+      }
+    },
+    "UAP,Version=v10.0/win10-x64": {
+      "CommonServiceLocator/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "CrossPlatformLibrary/2.0.0-pre6": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator": "1.3.0",
+          "Guards": "1.0.11",
+          "Tracing": "1.0.2"
+        },
+        "compile": {
+          "lib/uap10.0/CrossPlatformLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/CrossPlatformLibrary.dll": {}
+        }
+      },
+      "Guards/1.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/win81/Guards.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Guards.dll": {}
+        }
+      },
+      "Tracing/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Tracing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Tracing.dll": {}
+        }
+      },
+      "Xamarin.Forms/2.3.1.114": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Core.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Xaml.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Core.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Xaml.dll": {}
+        }
+      }
+    },
+    "UAP,Version=v10.0/win10-x64-aot": {
+      "CommonServiceLocator/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "CrossPlatformLibrary/2.0.0-pre6": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator": "1.3.0",
+          "Guards": "1.0.11",
+          "Tracing": "1.0.2"
+        },
+        "compile": {
+          "lib/uap10.0/CrossPlatformLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/CrossPlatformLibrary.dll": {}
+        }
+      },
+      "Guards/1.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/win81/Guards.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Guards.dll": {}
+        }
+      },
+      "Tracing/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Tracing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Tracing.dll": {}
+        }
+      },
+      "Xamarin.Forms/2.3.1.114": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Core.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Xaml.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Core.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Xaml.dll": {}
+        }
+      }
+    },
+    "UAP,Version=v10.0/win10-x86": {
+      "CommonServiceLocator/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "CrossPlatformLibrary/2.0.0-pre6": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator": "1.3.0",
+          "Guards": "1.0.11",
+          "Tracing": "1.0.2"
+        },
+        "compile": {
+          "lib/uap10.0/CrossPlatformLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/CrossPlatformLibrary.dll": {}
+        }
+      },
+      "Guards/1.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/win81/Guards.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Guards.dll": {}
+        }
+      },
+      "Tracing/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Tracing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Tracing.dll": {}
+        }
+      },
+      "Xamarin.Forms/2.3.1.114": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Core.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Xaml.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Core.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Xaml.dll": {}
+        }
+      }
+    },
+    "UAP,Version=v10.0/win10-x86-aot": {
+      "CommonServiceLocator/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "CrossPlatformLibrary/2.0.0-pre6": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator": "1.3.0",
+          "Guards": "1.0.11",
+          "Tracing": "1.0.2"
+        },
+        "compile": {
+          "lib/uap10.0/CrossPlatformLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/CrossPlatformLibrary.dll": {}
+        }
+      },
+      "Guards/1.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/win81/Guards.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Guards.dll": {}
+        }
+      },
+      "Tracing/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Tracing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Tracing.dll": {}
+        }
+      },
+      "Xamarin.Forms/2.3.1.114": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Core.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Xaml.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Core.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Xaml.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CommonServiceLocator/1.3.0": {
+      "sha512": "fbjO0SNwbOFPdwVfyqv+B7gIJ2CVBOFPKqn1mDDECK7KER8jFaOdcvroFYoAHa0ktPbxi5s+15qOLnA96f8GSA==",
+      "type": "package",
+      "files": [
+        "CommonServiceLocator.1.3.0.nupkg.sha512",
+        "CommonServiceLocator.nuspec",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.XML",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.pdb"
+      ]
+    },
+    "CrossPlatformLibrary/2.0.0-pre6": {
+      "sha512": "3e6UCEFF9wACkIm3Dy6PsbBV2gh3lMD8eQ5Agt+X6rDdqn+x01Wjfa+/CMfv1E2HNhRzxk2QAJF0ClLsasUBUg==",
+      "type": "package",
+      "files": [
+        "CrossPlatformLibrary.2.0.0-pre6.nupkg.sha512",
+        "CrossPlatformLibrary.nuspec",
+        "content/MonoTouch10/LinkerHelper.cs",
+        "content/xamarin.ios10/LinkerHelper.cs",
+        "lib/MonoAndroid10/CrossPlatformLibrary.dll",
+        "lib/MonoAndroid10/CrossPlatformLibrary.pdb",
+        "lib/MonoAndroid10/CrossPlatformLibrary.xml",
+        "lib/MonoTouch10/CrossPlatformLibrary.dll",
+        "lib/MonoTouch10/CrossPlatformLibrary.pdb",
+        "lib/MonoTouch10/CrossPlatformLibrary.xml",
+        "lib/net45/CrossPlatformLibrary.dll",
+        "lib/net45/CrossPlatformLibrary.pdb",
+        "lib/net45/CrossPlatformLibrary.xml",
+        "lib/portable-net45+dnxcore50+wp80+wpa81+win81+netcore45+monoandroid10+monotouch10+xamarin.ios10/CrossPlatformLibrary.dll",
+        "lib/portable-net45+dnxcore50+wp80+wpa81+win81+netcore45+monoandroid10+monotouch10+xamarin.ios10/CrossPlatformLibrary.pdb",
+        "lib/portable-net45+dnxcore50+wp80+wpa81+win81+netcore45+monoandroid10+monotouch10+xamarin.ios10/CrossPlatformLibrary.xml",
+        "lib/uap10.0/CrossPlatformLibrary.dll",
+        "lib/uap10.0/CrossPlatformLibrary.pdb",
+        "lib/uap10.0/CrossPlatformLibrary.xml",
+        "lib/win81/CrossPlatformLibrary.dll",
+        "lib/win81/CrossPlatformLibrary.pdb",
+        "lib/win81/CrossPlatformLibrary.xml",
+        "lib/wp8/CrossPlatformLibrary.dll",
+        "lib/wp8/CrossPlatformLibrary.pdb",
+        "lib/wp8/CrossPlatformLibrary.xml",
+        "lib/wpa81/CrossPlatformLibrary.dll",
+        "lib/wpa81/CrossPlatformLibrary.pdb",
+        "lib/wpa81/CrossPlatformLibrary.xml",
+        "lib/xamarin.ios10/CrossPlatformLibrary.dll",
+        "lib/xamarin.ios10/CrossPlatformLibrary.pdb",
+        "lib/xamarin.ios10/CrossPlatformLibrary.xml",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Guards/1.0.11": {
+      "sha512": "TqC7FPWXKa0IjMG8pFsNgXq5ciFztQ+fk8GnmkhgerwdnVAbet0ZvfpDzXs0S+UK7G2i6HLLBvEqL2IpAHqeYA==",
+      "type": "package",
+      "files": [
+        "Guards.1.0.11.nupkg.sha512",
+        "Guards.nuspec",
+        "lib/MonoAndroid10/Guards.dll",
+        "lib/MonoAndroid10/Guards.pdb",
+        "lib/MonoAndroid10/Guards.xml",
+        "lib/MonoTouch10/Guards.dll",
+        "lib/MonoTouch10/Guards.pdb",
+        "lib/MonoTouch10/Guards.xml",
+        "lib/portable-net45+dnxcore50+wp80+wpa81+win81+netcore45+monoandroid10+monotouch10+xamarin.ios10/Guards.dll",
+        "lib/portable-net45+dnxcore50+wp80+wpa81+win81+netcore45+monoandroid10+monotouch10+xamarin.ios10/Guards.pdb",
+        "lib/portable-net45+dnxcore50+wp80+wpa81+win81+netcore45+monoandroid10+monotouch10+xamarin.ios10/Guards.xml",
+        "lib/win81/Guards.dll",
+        "lib/win81/Guards.pdb",
+        "lib/win81/Guards.xml",
+        "lib/wp8/Guards.dll",
+        "lib/wp8/Guards.pdb",
+        "lib/wp8/Guards.xml",
+        "lib/wpa81/Guards.dll",
+        "lib/wpa81/Guards.pdb",
+        "lib/wpa81/Guards.xml",
+        "lib/xamarin.ios10/Guards.dll",
+        "lib/xamarin.ios10/Guards.pdb",
+        "lib/xamarin.ios10/Guards.xml",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Tracing/1.0.2": {
+      "sha512": "BWvloHJ21DJmHwMGBO5VHq38683QmVoODn+c/9++W88VF8bruQuTNow6wWlhELiRTgC1QGS5YWZidd8seKutlA==",
+      "type": "package",
+      "files": [
+        "Tracing.1.0.2.nupkg.sha512",
+        "Tracing.nuspec",
+        "lib/monoandroid10/Tracing.dll",
+        "lib/monoandroid10/Tracing.pdb",
+        "lib/monoandroid10/Tracing.xml",
+        "lib/monotouch10/Tracing.dll",
+        "lib/monotouch10/Tracing.pdb",
+        "lib/monotouch10/Tracing.xml",
+        "lib/net45/Tracing.dll",
+        "lib/net45/Tracing.pdb",
+        "lib/net45/Tracing.xml",
+        "lib/portable-net45+wp8+win8+wpa81/Tracing.dll",
+        "lib/portable-net45+wp8+win8+wpa81/Tracing.pdb",
+        "lib/portable-net45+wp8+win8+wpa81/Tracing.xml",
+        "lib/uap10.0/Tracing.dll",
+        "lib/uap10.0/Tracing.pdb",
+        "lib/uap10.0/Tracing.xml",
+        "lib/win81/Tracing.dll",
+        "lib/win81/Tracing.pdb",
+        "lib/win81/Tracing.xml",
+        "lib/wp8/Tracing.dll",
+        "lib/wp8/Tracing.pdb",
+        "lib/wp8/Tracing.xml",
+        "lib/wpa81/Tracing.dll",
+        "lib/wpa81/Tracing.pdb",
+        "lib/wpa81/Tracing.xml",
+        "lib/xamarin.ios10/Tracing.dll",
+        "lib/xamarin.ios10/Tracing.pdb",
+        "lib/xamarin.ios10/Tracing.xml",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Xamarin.Forms/2.3.1.114": {
+      "sha512": "2J3VK4EIFCeeorP0QrHA0Wnf4D4EvvMyyfOYtEvMIIrD7w47+v48zHkVGam7u85lSdMxngx4B523uYmHo24TaA==",
+      "type": "package",
+      "files": [
+        "Xamarin.Forms.2.3.1.114.nupkg.sha512",
+        "Xamarin.Forms.nuspec",
+        "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/ICSharpCode.Decompiler.dll",
+        "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/ICSharpCode.NRefactory.CSharp.dll",
+        "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/ICSharpCode.NRefactory.Cecil.dll",
+        "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/ICSharpCode.NRefactory.Xml.dll",
+        "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/ICSharpCode.NRefactory.dll",
+        "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Mono.Cecil.Mdb.dll",
+        "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Mono.Cecil.Pdb.dll",
+        "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Mono.Cecil.Rocks.dll",
+        "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Mono.Cecil.dll",
+        "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.Build.Tasks.dll",
+        "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.Core.dll",
+        "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.Xaml.dll",
+        "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.targets",
+        "lib/MonoAndroid10/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/MonoAndroid10/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/MonoAndroid10/FormsViewGroup.dll",
+        "lib/MonoAndroid10/FormsViewGroup.pdb",
+        "lib/MonoAndroid10/Xamarin.Forms.Core.dll",
+        "lib/MonoAndroid10/Xamarin.Forms.Core.pdb",
+        "lib/MonoAndroid10/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll",
+        "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.pdb",
+        "lib/MonoAndroid10/Xamarin.Forms.Platform.dll",
+        "lib/MonoAndroid10/Xamarin.Forms.Xaml.dll",
+        "lib/MonoAndroid10/Xamarin.Forms.Xaml.pdb",
+        "lib/MonoAndroid10/Xamarin.Forms.Xaml.xml",
+        "lib/MonoTouch10/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/MonoTouch10/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/MonoTouch10/Xamarin.Forms.Core.dll",
+        "lib/MonoTouch10/Xamarin.Forms.Core.dll.mdb",
+        "lib/MonoTouch10/Xamarin.Forms.Core.pdb",
+        "lib/MonoTouch10/Xamarin.Forms.Core.xml",
+        "lib/MonoTouch10/Xamarin.Forms.Platform.dll",
+        "lib/MonoTouch10/Xamarin.Forms.Platform.iOS.Classic.dll",
+        "lib/MonoTouch10/Xamarin.Forms.Xaml.dll",
+        "lib/MonoTouch10/Xamarin.Forms.Xaml.dll.mdb",
+        "lib/MonoTouch10/Xamarin.Forms.Xaml.pdb",
+        "lib/MonoTouch10/Xamarin.Forms.Xaml.xml",
+        "lib/MonoTouch10/ar/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/ca/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/cs/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/da/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/de/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/el/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/es/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/fi/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/fr/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/he/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/hi/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/hr/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/hu/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/id/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/it/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/ja/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/ko/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/ms/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/nb/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/nl/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/pl/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/pt-BR/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/pt/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/ro/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/ru/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/sk/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/sv/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/th/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/tr/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/uk/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/vi/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/zh-HK/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/zh-Hans/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/MonoTouch10/zh-Hant/Xamarin.Forms.Platform.iOS.Classic.resources.dll",
+        "lib/WP80/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/WP80/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/WP80/Xamarin.Forms.Core.dll",
+        "lib/WP80/Xamarin.Forms.Core.pdb",
+        "lib/WP80/Xamarin.Forms.Core.xml",
+        "lib/WP80/Xamarin.Forms.Platform.WP8.dll",
+        "lib/WP80/Xamarin.Forms.Platform.WP8.pdb",
+        "lib/WP80/Xamarin.Forms.Platform.dll",
+        "lib/WP80/Xamarin.Forms.Xaml.dll",
+        "lib/WP80/Xamarin.Forms.Xaml.pdb",
+        "lib/WP80/Xamarin.Forms.Xaml.xml",
+        "lib/Xamarin.iOS10/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/Xamarin.iOS10/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll.mdb",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Core.pdb",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Core.xml",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll.mdb",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.pdb",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll.mdb",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.pdb",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.xml",
+        "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ca/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/cs/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/da/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/de/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/el/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/es/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/fi/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/fr/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/he/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/hi/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/hr/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/hu/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/id/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/it/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ja/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ko/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ms/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/nb/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/nl/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ro/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ru/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/sk/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/sv/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/th/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/tr/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/uk/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/vi/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.Core.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.Core.dll.mdb",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.Core.pdb",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.Core.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.Platform.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.Platform.dll.mdb",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.Platform.pdb",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.Xaml.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.Xaml.dll.mdb",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.Xaml.pdb",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.Xaml.xml",
+        "lib/uap10.0/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/uap10.0/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/uap10.0/Xamarin.Forms.Core.dll",
+        "lib/uap10.0/Xamarin.Forms.Core.xml",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP.pri",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsTextBoxStyle.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/PageControl.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/Resources.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/Xamarin.Forms.Platform.UAP.xr.xml",
+        "lib/uap10.0/Xamarin.Forms.Platform.dll",
+        "lib/uap10.0/Xamarin.Forms.Xaml.dll",
+        "lib/uap10.0/Xamarin.Forms.Xaml.xml",
+        "lib/win81/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/win81/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/win81/Xamarin.Forms.Core.dll",
+        "lib/win81/Xamarin.Forms.Core.xml",
+        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet.dll",
+        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet.pri",
+        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/FormsTextBoxStyle.xbf",
+        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/Resources.xbf",
+        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/TabletResources.xbf",
+        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/Xamarin.Forms.Platform.WinRT.Tablet.xr.xml",
+        "lib/win81/Xamarin.Forms.Platform.WinRT.dll",
+        "lib/win81/Xamarin.Forms.Platform.WinRT.pri",
+        "lib/win81/Xamarin.Forms.Platform.WinRT/PageControl.xbf",
+        "lib/win81/Xamarin.Forms.Platform.WinRT/StepperControl.xbf",
+        "lib/win81/Xamarin.Forms.Platform.WinRT/Xamarin.Forms.Platform.WinRT.xr.xml",
+        "lib/win81/Xamarin.Forms.Platform.dll",
+        "lib/win81/Xamarin.Forms.Xaml.dll",
+        "lib/win81/Xamarin.Forms.Xaml.xml",
+        "lib/wpa81/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/wpa81/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/wpa81/Xamarin.Forms.Core.dll",
+        "lib/wpa81/Xamarin.Forms.Core.xml",
+        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone.dll",
+        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone.pri",
+        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/FormsTextBoxStyle.xbf",
+        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/PhoneResources.xbf",
+        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/Resources.xbf",
+        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/SearchBox.xbf",
+        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/Xamarin.Forms.Platform.WinRT.Phone.xr.xml",
+        "lib/wpa81/Xamarin.Forms.Platform.WinRT.dll",
+        "lib/wpa81/Xamarin.Forms.Platform.WinRT.pri",
+        "lib/wpa81/Xamarin.Forms.Platform.WinRT/PageControl.xbf",
+        "lib/wpa81/Xamarin.Forms.Platform.WinRT/StepperControl.xbf",
+        "lib/wpa81/Xamarin.Forms.Platform.WinRT/Xamarin.Forms.Platform.WinRT.xr.xml",
+        "lib/wpa81/Xamarin.Forms.Platform.dll",
+        "lib/wpa81/Xamarin.Forms.Xaml.dll",
+        "lib/wpa81/Xamarin.Forms.Xaml.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [
+      "CrossPlatformLibrary >= 2.0.0-pre6",
+      "Xamarin.Forms >= 2.3.1.114"
+    ],
+    "UAP,Version=v10.0": []
+  }
+}

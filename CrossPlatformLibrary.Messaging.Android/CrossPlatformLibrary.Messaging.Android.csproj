@@ -70,7 +70,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CrossPlatformLibrary.Messaging\CrossPlatformLibrary.Messaging.csproj">
+      <Project>{a6fcef44-d2ba-42c7-b3cb-13667bcd7b54}</Project>
+      <Name>CrossPlatformLibrary.Messaging</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\CrossPlatformLibrary.Messaging.Shared\CrossPlatformLibrary.Messaging.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -1,4 +1,3 @@
-using Android.App;
 using Android.Content;
 
 using Guards;
@@ -9,12 +8,12 @@ namespace CrossPlatformLibrary.Messaging
     {
         public static void StartNewActivity(this Intent intent)
         {
-            Guard.ArgumentNotNull(() => intent);
+            Guard.ArgumentNotNull(intent, nameof(intent));
 
             intent.SetFlags(ActivityFlags.ClearTop);
             intent.SetFlags(ActivityFlags.NewTask);
 
-            Application.Context.StartActivity(intent);
+            Android.App.Application.Context.StartActivity(intent);
         }
     }
 }

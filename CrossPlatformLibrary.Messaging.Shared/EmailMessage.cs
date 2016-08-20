@@ -1,18 +1,16 @@
 ﻿using System.Collections.Generic;
 
-using Guards;
-
 namespace CrossPlatformLibrary.Messaging
 {
     /// <summary>
     ///     Email used for sending e-mails.
     /// </summary>
-    public class EmailMessage
+    internal class EmailMessage : IEmailMessage
     {
-        private List<string> _recipientsBcc;
-        private List<string> _recipientsCc;
-        private List<string> _recipients;
-        private List<EmailAttachment> _attachments;
+        private List<string> recipientsBcc;
+        private List<string> recipientsCc;
+        private List<string> recipients;
+        private List<IEmailAttachment> attachments;
 
         /// <summary>
         ///     Create new email request
@@ -21,9 +19,10 @@ namespace CrossPlatformLibrary.Messaging
         public EmailMessage(string to)
             : this()
         {
-            Guard.ArgumentNotNullOrEmpty(() => to);
-            
-            this.Recipients.Add(to);
+            if (!string.IsNullOrWhiteSpace(to))
+            {
+                this.Recipients.Add(to);
+            }
         }
 
         /// <summary>
@@ -32,14 +31,11 @@ namespace CrossPlatformLibrary.Messaging
         /// <param name="to">Email recipient</param>
         /// <param name="subject">Email subject</param>
         /// <param name="message">Email message</param>
-        public EmailMessage(string to, string subject, string message)
+        public EmailMessage(string to = null, string subject = null, string message = null)
             : this(to)
         {
-            Guard.ArgumentNotNullOrEmpty(() => subject);
-            Guard.ArgumentNotNullOrEmpty(() => message);
-
-            this.Subject = subject;
-            this.Message = message;
+            this.Subject = subject ?? string.Empty;
+            this.Message = message ?? string.Empty;
         }
 
         /// <summary>
@@ -50,8 +46,6 @@ namespace CrossPlatformLibrary.Messaging
             this.Subject = string.Empty;
             this.Message = string.Empty;
         }
-
-        #region Properties
 
         /// <summary>
         ///     Email message body.
@@ -70,15 +64,15 @@ namespace CrossPlatformLibrary.Messaging
         /// <summary>
         ///     List of attachments.
         /// </summary>
-        public List<EmailAttachment> Attachments
+        public List<IEmailAttachment> Attachments
         {
             get
             {
-                return this._attachments ?? (this._attachments = new List<EmailAttachment>());
+                return this.attachments ?? (this.attachments = new List<IEmailAttachment>());
             }
             set
             {
-                this._attachments = value;
+                this.attachments = value;
             }
         }
 
@@ -89,11 +83,11 @@ namespace CrossPlatformLibrary.Messaging
         {
             get
             {
-                return this._recipients ?? (this._recipients = new List<string>());
+                return this.recipients ?? (this.recipients = new List<string>());
             }
             set
             {
-                this._recipients = value;
+                this.recipients = value;
             }
         }
 
@@ -104,11 +98,11 @@ namespace CrossPlatformLibrary.Messaging
         {
             get
             {
-                return this._recipientsBcc ?? (this._recipientsBcc = new List<string>());
+                return this.recipientsBcc ?? (this.recipientsBcc = new List<string>());
             }
             set
             {
-                this._recipientsBcc = value;
+                this.recipientsBcc = value;
             }
         }
 
@@ -119,11 +113,11 @@ namespace CrossPlatformLibrary.Messaging
         {
             get
             {
-                return this._recipientsCc ?? (this._recipientsCc = new List<string>());
+                return this.recipientsCc ?? (this.recipientsCc = new List<string>());
             }
             set
             {
-                this._recipientsCc = value;
+                this.recipientsCc = value;
             }
         }
 
@@ -131,7 +125,5 @@ namespace CrossPlatformLibrary.Messaging
         ///     Email subject
         /// </summary>
         public string Subject { get; set; }
-
-        #endregion
     }
 }

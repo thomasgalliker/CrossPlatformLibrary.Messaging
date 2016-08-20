@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using System;
+using System.Collections.Generic;
 
 namespace CrossPlatformLibrary.Messaging
 {
@@ -18,81 +18,90 @@ namespace CrossPlatformLibrary.Messaging
         public EmailMessageBuilder Bcc(string bcc)
         {
             if (!string.IsNullOrWhiteSpace(bcc))
-            {
-                this.email.RecipientsCc.Add(bcc);
-            }
+                this.email.RecipientsBcc.Add(bcc);
 
             return this;
         }
 
         public EmailMessageBuilder Bcc(IEnumerable<string> bcc)
         {
-            this.email.RecipientsCc.AddRange(bcc);
+            this.email.RecipientsBcc.AddRange(bcc);
             return this;
         }
 
         public EmailMessageBuilder Body(string body)
         {
             if (!string.IsNullOrEmpty(body))
-            {
                 this.email.Message = body;
-            }
 
             return this;
         }
-
-#if __ANDROID__ || __IOS__
 
         public EmailMessageBuilder BodyAsHtml(string htmlBody)
         {
+#if __ANDROID__ || __IOS__
             if (!string.IsNullOrEmpty(htmlBody))
-            {
-                this.email.Message = htmlBody;
-                this.email.IsHtml = true;
+            {                
+                email.Message = htmlBody;
+                email.IsHtml = true;
             }
 
             return this;
+#else
+            throw new PlatformNotSupportedException("API not supported on platform. Use IEmailTask.CanSendEmailBodyAsHtml to check availability");
+#endif
         }
 
+        public EmailMessageBuilder WithAttachment(string filePath, string contentType)
+        {
+#if WINDOWS_PHONE_APP || WINDOWS_UWP
+            throw new PlatformNotSupportedException("API not supported on platform. Use EmailMessageBuilder.WithAttachment(Windows.Storage.IStorageFile file) overload instead");
+
+#elif __ANDROID__ || __IOS__
+            email.Attachments.Add(new EmailAttachment(filePath, contentType));
+            return this;
+#else
+            throw new PlatformNotSupportedException("API not supported on platform. Use IEmailTask.CanSendEmailAttachments to check availability");
 #endif
+        }
 
 #if __ANDROID__
 
-    /// <summary>
-    ///     Add the file located at <paramref name="filePath" /> as an attachment
-    /// </summary>
-    /// <param name="filePath">Full path to the file to attach</param>
+        /// <summary>
+        ///     Add the file located at <paramref name="filePath"/> as an attachment
+        /// </summary>
+        /// <param name="filePath">Full path to the file to attach</param>
         public EmailMessageBuilder WithAttachment(string filePath)
         {
-            this.email.Attachments.Add(new EmailAttachment(filePath));
+            email.Attachments.Add(new EmailAttachment(filePath));
             return this;
         }
 
 #elif __IOS__
 
         /// <summary>
-        ///     Add the <paramref name="content" /> as an attachment to the email.
+        ///     Add the <paramref name="content"/> as an attachment to the email.
         /// </summary>
         /// <param name="fileName">File name</param>
         /// <param name="content">File content</param>
         /// <param name="contentType">File content type (image/jpeg etc.)</param>
-        public EmailMessageBuilder WithAttachment(string fileName, Stream content, string contentType)
+        public EmailMessageBuilder WithAttachment(string fileName, System.IO.Stream content, string contentType)
         {
-            this.email.Attachments.Add(new EmailAttachment(fileName, content, contentType));
+            email.Attachments.Add(new EmailAttachment(fileName, content, contentType));
             return this;
         }
 
-#elif WINDOWS_PHONE_APP
+#elif WINDOWS_PHONE_APP || WINDOWS_UWP
 
         public EmailMessageBuilder WithAttachment(Windows.Storage.IStorageFile file)
         {
-            this.email.Attachments.Add(new EmailAttachment(file.Name));
+            email.Attachments.Add(new EmailAttachment(file));
             return this;
         }
 
 #endif
 
-        public EmailMessage Build()
+        public IEmailMessage Build()
         {
             return this.email;
         }
@@ -100,9 +109,7 @@ namespace CrossPlatformLibrary.Messaging
         public EmailMessageBuilder Cc(string cc)
         {
             if (!string.IsNullOrWhiteSpace(cc))
-            {
                 this.email.RecipientsCc.Add(cc);
-            }
 
             return this;
         }
@@ -116,9 +123,7 @@ namespace CrossPlatformLibrary.Messaging
         public EmailMessageBuilder Subject(string subject)
         {
             if (!string.IsNullOrEmpty(subject))
-            {
                 this.email.Subject = subject;
-            }
 
             return this;
         }
@@ -126,9 +131,7 @@ namespace CrossPlatformLibrary.Messaging
         public EmailMessageBuilder To(string to)
         {
             if (!string.IsNullOrWhiteSpace(to))
-            {
                 this.email.Recipients.Add(to);
-            }
 
             return this;
         }
