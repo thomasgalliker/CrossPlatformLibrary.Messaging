@@ -127,6 +127,12 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MessagingSample\MessagingSample.csproj">
+      <Project>{4fc2ffe8-61b2-4597-b51f-d2529f3cf652}</Project>
+      <Name>MessagingSample</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

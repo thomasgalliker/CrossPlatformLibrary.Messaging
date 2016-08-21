@@ -52,6 +52,10 @@
       <HintPath>..\..\..\packages\CrossPlatformLibrary.2.0.0-pre6\lib\MonoAndroid10\CrossPlatformLibrary.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="CrossPlatformLibrary.Messaging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrossPlatformLibrary.Messaging.2.0.0-pre3\lib\monoandroid10\CrossPlatformLibrary.Messaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Xamarin.Forms.2.3.1.114\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
       <Private>True</Private>
