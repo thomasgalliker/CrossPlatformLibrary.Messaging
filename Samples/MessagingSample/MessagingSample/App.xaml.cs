@@ -13,13 +13,14 @@ namespace MessagingSample
             this.InitializeComponent();
 
             this.bootstrapper = new Bootstrapper();
+            this.bootstrapper.Startup();
 
             this.MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
         {
-            this.bootstrapper.Startup();
+            //this.bootstrapper.Startup();
         }
 
         protected override void OnSleep()

@@ -9,16 +9,26 @@ namespace MessagingSample
 {
     public partial class MainPage : ContentPage
     {
+        private readonly IEmailTask emailTask;
+        private readonly ISmsTask smsTask;
+        private readonly IPhoneCallTask phoneCallTask;
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            this.emailTask = SimpleIoc.Default.GetInstance<IEmailTask>();
+            this.smsTask = SimpleIoc.Default.GetInstance<ISmsTask>();
+            this.phoneCallTask = SimpleIoc.Default.GetInstance<IPhoneCallTask>();
+
+            this.ButtonSendMail.IsEnabled = this.emailTask.CanSendEmail;
+            this.ButtonSendSms.IsEnabled = this.smsTask.CanSendSms;
+            this.ButtonPhoneCall.IsEnabled = this.phoneCallTask.CanMakePhoneCall;
         }
 
-        private void ButtonSendMail(object sender, EventArgs e)
+        private void OnButtonSendMailClicked(object sender, EventArgs e)
         {
-            var emailTask = SimpleIoc.Default.GetInstance<IEmailTask>();
-
-            if (emailTask.CanSendEmail)
+            if (this.emailTask.CanSendEmail)
             {
                 var builder =
                     new EmailMessageBuilder().To("to.plugins@xamarin.com")
@@ -37,29 +47,26 @@ namespace MessagingSample
                 }
 
                 var emailMessage = builder.Build();
-                emailTask.SendEmail(emailMessage);
+                this.emailTask.SendEmail(emailMessage);
             }
         }
 
         public bool SendAsHtml { get; set; }
 
-        private void ButtonSendSms(object sender, EventArgs e)
-        {
-            var smsTask = SimpleIoc.Default.GetInstance<ISmsTask>();
 
-            if (smsTask.CanSendSms)
+        private void OnButtonSendSmsClicked(object sender, EventArgs e)
+        {
+            if (this.smsTask.CanSendSms)
             {
-                smsTask.SendSms("+4179 111 22 33", "Well hello there from CrossPlatformLibrary.Messaging!");
+                this.smsTask.SendSms("+4179 111 22 33", "Well hello there from CrossPlatformLibrary.Messaging!");
             }
         }
-
-        private void ButtonPhoneCall(object sender, EventArgs e)
+        
+        private void OnButtonPhoneCallClicked(object sender, EventArgs e)
         {
-            var phoneCall = SimpleIoc.Default.GetInstance<IPhoneCallTask>();
-
-            if (phoneCall.CanMakePhoneCall)
+            if (this.phoneCallTask.CanMakePhoneCall)
             {
-                phoneCall.MakePhoneCall("+4179 111 22 33", "Xamarin User");
+                this.phoneCallTask.MakePhoneCall("+4179 111 22 33", "Xamarin User");
             }
         }
     }

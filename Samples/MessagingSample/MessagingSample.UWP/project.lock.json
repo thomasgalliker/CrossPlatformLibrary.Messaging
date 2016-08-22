@@ -11,7 +11,7 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
         }
       },
-      "CrossPlatformLibrary/2.0.0-pre6": {
+      "CrossPlatformLibrary/2.0.0-pre7": {
         "dependencies": {
           "CommonServiceLocator": "1.3.0",
           "Guards": "1.0.11",
@@ -24,7 +24,7 @@
           "lib/uap10.0/CrossPlatformLibrary.dll": {}
         }
       },
-      "CrossPlatformLibrary.Messaging/2.0.0-pre3": {
+      "CrossPlatformLibrary.Messaging/2.0.0-pre5": {
         "dependencies": {
           "CrossPlatformLibrary": "[1.9.99, 2.0.0)",
           "Guards": "1.0.11"
@@ -2104,7 +2104,7 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
         }
       },
-      "CrossPlatformLibrary/2.0.0-pre6": {
+      "CrossPlatformLibrary/2.0.0-pre7": {
         "dependencies": {
           "CommonServiceLocator": "1.3.0",
           "Guards": "1.0.11",
@@ -2117,7 +2117,7 @@
           "lib/uap10.0/CrossPlatformLibrary.dll": {}
         }
       },
-      "CrossPlatformLibrary.Messaging/2.0.0-pre3": {
+      "CrossPlatformLibrary.Messaging/2.0.0-pre5": {
         "dependencies": {
           "CrossPlatformLibrary": "[1.9.99, 2.0.0)",
           "Guards": "1.0.11"
@@ -4277,7 +4277,7 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
         }
       },
-      "CrossPlatformLibrary/2.0.0-pre6": {
+      "CrossPlatformLibrary/2.0.0-pre7": {
         "dependencies": {
           "CommonServiceLocator": "1.3.0",
           "Guards": "1.0.11",
@@ -4290,7 +4290,7 @@
           "lib/uap10.0/CrossPlatformLibrary.dll": {}
         }
       },
-      "CrossPlatformLibrary.Messaging/2.0.0-pre3": {
+      "CrossPlatformLibrary.Messaging/2.0.0-pre5": {
         "dependencies": {
           "CrossPlatformLibrary": "[1.9.99, 2.0.0)",
           "Guards": "1.0.11"
@@ -6489,7 +6489,7 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
         }
       },
-      "CrossPlatformLibrary/2.0.0-pre6": {
+      "CrossPlatformLibrary/2.0.0-pre7": {
         "dependencies": {
           "CommonServiceLocator": "1.3.0",
           "Guards": "1.0.11",
@@ -6502,7 +6502,7 @@
           "lib/uap10.0/CrossPlatformLibrary.dll": {}
         }
       },
-      "CrossPlatformLibrary.Messaging/2.0.0-pre3": {
+      "CrossPlatformLibrary.Messaging/2.0.0-pre5": {
         "dependencies": {
           "CrossPlatformLibrary": "[1.9.99, 2.0.0)",
           "Guards": "1.0.11"
@@ -8671,7 +8671,7 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
         }
       },
-      "CrossPlatformLibrary/2.0.0-pre6": {
+      "CrossPlatformLibrary/2.0.0-pre7": {
         "dependencies": {
           "CommonServiceLocator": "1.3.0",
           "Guards": "1.0.11",
@@ -8684,7 +8684,7 @@
           "lib/uap10.0/CrossPlatformLibrary.dll": {}
         }
       },
-      "CrossPlatformLibrary.Messaging/2.0.0-pre3": {
+      "CrossPlatformLibrary.Messaging/2.0.0-pre5": {
         "dependencies": {
           "CrossPlatformLibrary": "[1.9.99, 2.0.0)",
           "Guards": "1.0.11"
@@ -10892,7 +10892,7 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
         }
       },
-      "CrossPlatformLibrary/2.0.0-pre6": {
+      "CrossPlatformLibrary/2.0.0-pre7": {
         "dependencies": {
           "CommonServiceLocator": "1.3.0",
           "Guards": "1.0.11",
@@ -10905,7 +10905,7 @@
           "lib/uap10.0/CrossPlatformLibrary.dll": {}
         }
       },
-      "CrossPlatformLibrary.Messaging/2.0.0-pre3": {
+      "CrossPlatformLibrary.Messaging/2.0.0-pre5": {
         "dependencies": {
           "CrossPlatformLibrary": "[1.9.99, 2.0.0)",
           "Guards": "1.0.11"
@@ -13074,7 +13074,7 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
         }
       },
-      "CrossPlatformLibrary/2.0.0-pre6": {
+      "CrossPlatformLibrary/2.0.0-pre7": {
         "dependencies": {
           "CommonServiceLocator": "1.3.0",
           "Guards": "1.0.11",
@@ -13087,7 +13087,7 @@
           "lib/uap10.0/CrossPlatformLibrary.dll": {}
         }
       },
-      "CrossPlatformLibrary.Messaging/2.0.0-pre3": {
+      "CrossPlatformLibrary.Messaging/2.0.0-pre5": {
         "dependencies": {
           "CrossPlatformLibrary": "[1.9.99, 2.0.0)",
           "Guards": "1.0.11"
@@ -15299,11 +15299,11 @@
         "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.pdb"
       ]
     },
-    "CrossPlatformLibrary/2.0.0-pre6": {
-      "sha512": "3e6UCEFF9wACkIm3Dy6PsbBV2gh3lMD8eQ5Agt+X6rDdqn+x01Wjfa+/CMfv1E2HNhRzxk2QAJF0ClLsasUBUg==",
+    "CrossPlatformLibrary/2.0.0-pre7": {
+      "sha512": "a6WiMOM46rnLA+hYSohPIR8ndzPYLSOvZTQSHYMVhk/npJ5IT/hIqDHkcFzGUC+EVZSFQxbOGK9MU+BmlepDww==",
       "type": "package",
       "files": [
-        "CrossPlatformLibrary.2.0.0-pre6.nupkg.sha512",
+        "CrossPlatformLibrary.2.0.0-pre7.nupkg.sha512",
         "CrossPlatformLibrary.nuspec",
         "content/MonoTouch10/LinkerHelper.cs",
         "content/xamarin.ios10/LinkerHelper.cs",
@@ -15339,11 +15339,11 @@
         "tools/uninstall.ps1"
       ]
     },
-    "CrossPlatformLibrary.Messaging/2.0.0-pre3": {
-      "sha512": "mOFWy1KVTj1VNOMi+Ee6QKTI4/7LsJePPo7dSwGn1ELh7oKr2LO80k905xxFm5BS0zYFFnn4txfJFpXHW7r6Lw==",
+    "CrossPlatformLibrary.Messaging/2.0.0-pre5": {
+      "sha512": "DwmVpqZd/hg5gjVljZg83w3qfge7ReDsZdyhWJGlj4OykAwF9+2IVOR6s06RWqlOtDnpwguTfSAD+s0h5a0+UQ==",
       "type": "package",
       "files": [
-        "CrossPlatformLibrary.Messaging.2.0.0-pre3.nupkg.sha512",
+        "CrossPlatformLibrary.Messaging.2.0.0-pre5.nupkg.sha512",
         "CrossPlatformLibrary.Messaging.nuspec",
         "lib/monoandroid10/CrossPlatformLibrary.Messaging.dll",
         "lib/monoandroid10/CrossPlatformLibrary.Messaging.pdb",
@@ -15354,6 +15354,9 @@
         "lib/portable-net45+dnxcore50+wp80+wpa81+win81+netcore45+monoandroid10+monotouch10+xamarin.ios10/CrossPlatformLibrary.Messaging.dll",
         "lib/portable-net45+dnxcore50+wp80+wpa81+win81+netcore45+monoandroid10+monotouch10+xamarin.ios10/CrossPlatformLibrary.Messaging.pdb",
         "lib/portable-net45+dnxcore50+wp80+wpa81+win81+netcore45+monoandroid10+monotouch10+xamarin.ios10/CrossPlatformLibrary.Messaging.xml",
+        "lib/uwp10.0/CrossPlatformLibrary.Messaging.dll",
+        "lib/uwp10.0/CrossPlatformLibrary.Messaging.pdb",
+        "lib/uwp10.0/CrossPlatformLibrary.Messaging.xml",
         "lib/win81/CrossPlatformLibrary.Messaging.dll",
         "lib/win81/CrossPlatformLibrary.Messaging.pdb",
         "lib/win81/CrossPlatformLibrary.Messaging.xml",
@@ -21651,8 +21654,8 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "CrossPlatformLibrary >= 2.0.0-pre6",
-      "CrossPlatformLibrary.Messaging >= 2.0.0-pre3",
+      "CrossPlatformLibrary >= 2.0.0-pre7",
+      "CrossPlatformLibrary.Messaging >= 2.0.0-pre5",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
       "Xamarin.Forms >= 2.3.1.114"
     ],
