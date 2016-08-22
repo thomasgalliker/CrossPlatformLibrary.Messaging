@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-
 using Guards;
 
 using Microsoft.Phone.Tasks;
